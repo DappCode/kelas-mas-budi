@@ -27,6 +27,7 @@ $results = mysqli_query($mysqli, "SELECT * FROM users"); // --> Menghubungkan de
                 <th>Email</th>
                 <th>Address</th>
                 <th>Password</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +39,9 @@ $results = mysqli_query($mysqli, "SELECT * FROM users"); // --> Menghubungkan de
                         <td> <?php echo $res['email'] ?></td>
                         <td> <?php echo $res['alamat'] ?></td>
                         <td> <?php echo $res['password'] ?></td>
+                        <td> 
+                        <a onclick="return confirm('Delete data?')" href="delete.php?id=<?php echo $res['id'] ?>"> deleted </a>
+                        <a href="edit.php?id=<?php echo $res['id'] ?>"> Edit </a> </td>
                     </tr>
                 <?php }?>
         </tbody>
