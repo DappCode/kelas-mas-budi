@@ -1,5 +1,11 @@
 <?php
+session_start();
+// echo $_SESSION['email'];  // --> Email Yang Login
 include_once('config.php');  //--> Menghubunngkan dengan file "config.php"
+
+if(! isset($_SESSION['email'])) {
+    header("Location:../../pertemuan-5/login.php");
+}
 
 $results = mysqli_query($mysqli, "SELECT * FROM users"); // --> Menghubungkan dengan Query yang ada di database
 
@@ -19,6 +25,7 @@ $results = mysqli_query($mysqli, "SELECT * FROM users"); // --> Menghubungkan de
 </head>
 <body>
     <h3><a href="add.php">Tambah data</a></h3>
+    <h3><a href="../../pertemuan-5/logout.php">Logout</a></h3>
     <table border="5" width="100%">
         <thead>
             <tr>
