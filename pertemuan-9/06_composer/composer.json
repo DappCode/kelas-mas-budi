@@ -1,0 +1,20 @@
+{
+    "name": "ibnukholil/06_composer",
+    "authors": [
+        {
+            "name": "DappCode",
+            "email": "ibnukholil@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^1.22",
+        "fzaninotto/faker": "^1.7",
+        "psr/log": "1.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Portal\\": "src/"
+        }
+    }
+
+}

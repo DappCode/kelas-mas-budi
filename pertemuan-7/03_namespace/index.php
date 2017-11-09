@@ -3,16 +3,16 @@
     include_once("Xiaomi/Smartphone.php");
     
     //Cara Pertama --> Sangat Di Rekomendasikan
-    // use Xiaomi\Smartphone as Xiaomi; 
-    // use Asus\Smartphone as Asus;
+    use Xiaomi\Smartphone as Xiaomi; 
+    use Asus\Smartphone as Asus;
 
-    // $xiaomi = new Xiaomi();
-    // echo $xiaomi->tampilMerk();
+    $xiaomi = new Xiaomi();
+    echo $xiaomi->tampilMerk();
 
-    // echo "<br>";
+    echo "<br>";
 
-    // $asusz6 = new Asus();
-    // echo $asusz6->tampilMerk();
+    $asusz6 = new Asus();
+    echo $asusz6->tampilMerk();
 
     // Cara Kedua
     // $xiaomi = new Xiaomi\Smartphone();
@@ -24,8 +24,8 @@
     // echo $asusz6->tampilMerk();
 
     // Cara Ketiga -- > Tidak Di Rekomendasikan 
-    echo (new Xiaomi\Smartphone())->tampilMerk();
-    echo "<br>";
-    echo (new Asus\Smartphone())->tampilMerk();
+    // echo (new Xiaomi\Smartphone())->tampilMerk();
+    // echo "<br>";
+    // echo (new Asus\Smartphone())->tampilMerk();
 
 ?>
