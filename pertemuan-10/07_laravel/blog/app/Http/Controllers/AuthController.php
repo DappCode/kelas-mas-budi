@@ -31,14 +31,18 @@ class AuthController extends Controller
 
         $dataLogin = ['email' => $email, 'password' => $password];
         if(Auth::attempt($dataLogin)) {
-            dd('login');
+           return redirect('/student');
         }
-
-        dd('gagal Login');
-    }
-
-    public function logout()
-    {
         
+        return redirect()->back()->with("error", "Gagal Login CahKuPluK!");
+        
+    }
+    
+    public function destroy()
+    {
+        Auth::logout();
+
+        return redirect('/login');
+
     }
 }
